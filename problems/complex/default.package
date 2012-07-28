@@ -1,15 +1,15 @@
 please_version = 0.2
-name = 
+name = complex
 shortname = complex
-tags = 
+tags = numbers_theory; brute_force
 type = 
 
 input = stdin
 output = stdout
-time_limit = 2
+time_limit = 1
 memory_limit = 64
 
-checker = checker.cpp
+checker = wcmp.cpp
 validator = validator.cpp
 main_solution = solutions/solution.cpp
 
