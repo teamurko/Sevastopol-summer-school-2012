@@ -1,4 +1,16 @@
 [sample]tests/[1-2]
-[max_test] generator_max.py
+[small] generator_sequal.py 100 110
+[middle] generator_sequal.py 100 100000
+[large] generator_sequal.py 100 1000000000
+[large] generator_sequal.py 100 10000000000
+[large] generator_sequal.py 100 100000000000
+[large] generator_sequal.py 100 1000000000000
+[large] generator_sequal.py 100 10000000000000
+[large] generator_sequal.py 100 100000000000000
+[large] generator_sequal.py 100 1000000000000000
+[large] generator_sequal.py 100 9000300040000000
+[large] generator_sequal.py 100 7540000042342234
+[large] generator_sequal.py 100 4530002056756756
+[max_test] generator_sequal.py 100 10000000000000000
 
 
