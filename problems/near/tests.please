@@ -34,3 +34,47 @@
 [random_chain] gen_random.py 8 40000 40000 0 10 100 10000 1
 [random_chain] gen_random.py 9 40000 40000 0 10 100 10000 1
 [random_chain] gen_random.py 10 40000 40000 0 10 100 100 1
+
+[random_binary] gen_random.py 10 40000 40000 0 10 100 100 2
+[random_binary] gen_random.py 20 40000 40000 0 10 100 100 2
+[random_binary] gen_random.py 30 40000 40000 0 10 10000 100 2
+[random_binary] gen_random.py 40 40000 40000 0 10 10000 100 2
+[random_binary] gen_random.py 50 40000 40000 0 10 10000 100 2
+[random_binary] gen_random.py 60 40000 40000 0 10 100 10000 2
+[random_binary] gen_random.py 70 40000 40000 0 10 100 10000 2
+[random_binary] gen_random.py 80 40000 40000 0 10 100 10000 2
+[random_binary] gen_random.py 90 40000 40000 0 10 100 10000 2
+[random_binary] gen_random.py 100 40000 40000 0 10 100 100 2
+
+[random_wide] gen_random.py 11 40000 40000 0 10 100 100 20
+[random_wide] gen_random.py 21 40000 40000 0 10 100 100 20
+[random_wide] gen_random.py 31 40000 40000 0 10 10000 100 20
+[random_wide] gen_random.py 41 40000 40000 0 10 10000 100 20
+[random_wide] gen_random.py 51 40000 40000 0 10 10000 100 20
+[random_wide] gen_random.py 61 40000 40000 0 10 100 10000 20
+[random_wide] gen_random.py 71 40000 40000 0 10 100 10000 2000
+[random_wide] gen_random.py 81 40000 40000 0 10 100 10000 2000
+[random_wide] gen_random.py 91 40000 40000 0 10 100 10000 2000
+[random_wide] gen_random.py 101 40000 40000 0 10 100 100 2000
+
+[random_wide] gen_random.py 111 40000 40000 0 10 100 100 20
+[random_wide] gen_random.py 121 40000 40000 0 10 100 100 20
+[random_wide] gen_random.py 131 40000 40000 0 10 10000 100 20
+[random_wide] gen_random.py 141 40000 40000 0 10 10000 100 20
+[random_wide] gen_random.py 151 40000 40000 0 10 10000 100 20
+[random_wide] gen_random.py 161 40000 40000 0 10 100 10000 20
+[random_wide] gen_random.py 171 40000 40000 0 10 100 10000 2000
+[random_wide] gen_random.py 181 40000 40000 0 10 100 10000 2000
+[random_wide] gen_random.py 191 40000 40000 0 10 100 10000 2000
+[random_wide] gen_random.py 1101 40000 40000 0 10 100 100 2000
+
+[random_wide] gen_random.py 1111 40000 40000 0 10 100 100 10
+[random_wide] gen_random.py 1121 40000 40000 0 10 100 100 10
+[random_wide] gen_random.py 1131 40000 40000 0 10 10000 100 10
+[random_wide] gen_random.py 1141 40000 40000 0 10 10000 100 10
+[random_wide] gen_random.py 1151 40000 40000 0 10 10000 100 10
+[random_wide] gen_random.py 1161 40000 40000 0 10 100 10000 10
+[random_wide] gen_random.py 1171 40000 40000 0 10 100 10000 10
+[random_wide] gen_random.py 1181 40000 40000 0 10 100 10000 10
+[random_wide] gen_random.py 1191 40000 40000 0 10 100 10000 10
+[random_wide] gen_random.py 11101 40000 40000 0 10 100 100 10

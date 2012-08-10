@@ -86,7 +86,7 @@ void precalc()
                 if (j > 0) {
                     up[i][lst[j]] = lst[j - 1];
                 }
-                if (i + 1 < static_cast<int>(lst.size())) {
+                if (j + 1 < static_cast<int>(lst.size())) {
                     down[i][lst[j]] = lst[j + 1];
                 }
             }
@@ -118,7 +118,7 @@ struct Cmp
 int dijkstra(const Graph2& graph, int source, int target)
 {
     dist.resize(graph.size(), INF);
-    dist[source] = 0;
+    dist.at(source) = 0;
     set<int, Cmp> q;
     q.insert(source);
     while (!q.empty()) {
@@ -157,17 +157,21 @@ void solve()
             int u = up[i][v];
             if (u == -1) {
                 if (parent[v] != -1) {
+                    assert(parent[v] < numNodes);
                     graph2[outer + i].push_back(
                                       Edge(6 * parent[v] + 3 + i, 1));
                 }
             } else {
+                assert(u < numNodes);
                 graph2[outer + i].push_back(Edge(6 * u + i, 1));
             }
             int d = down[i][v];
             if (d != -1) {
+                assert(d < numNodes);
                 graph2[outer + i].push_back(Edge(6 * d + i, 1));
             }
             if (first[i][v] != -1) {
+                assert(first[i][v] < numNodes);
                 graph2[inner + i].push_back(Edge(6 * first[i][v] + i, 1));
             }
             forn(j, 3) {
