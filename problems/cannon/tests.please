@@ -4,7 +4,7 @@
 [hand]python '4\n1 -500\n1 500\n500 0\n300 23\n'
 [hand]python '4\n10 -500\n10 500\n500 0\n300 23\n'
 [hand]python '4\n100 -500\n100 500\n500 0\n300 23\n'
-[hand]python '3\n500 500\n500 400\n400 500\n\n'
+[hand]python '3\n500 500\n500 400\n400 500\n'
 
 [random]gen_random.py 1 1 50 1 50 
 [random]gen_random.py 2 1 50 1 50 
