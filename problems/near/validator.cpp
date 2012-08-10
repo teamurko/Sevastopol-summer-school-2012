@@ -11,16 +11,16 @@ typedef vector<vector<pair<string, int> > > Graph;
 int main()
 {
     registerValidation();
-    int numVertices = inf.readInt(1, 100000);
+    int numVertices = inf.readInt(1, 40000);
     inf.readSpace();
-    int sortTime = inf.readInt(1, 10);
+    int sortTime = inf.readInt(0, 10);
     inf.readEoln();
     Graph graph(numVertices);
     int root = -1;
     for (int i = 0; i < numVertices; ++i) {
         int parent = inf.readInt(-1, numVertices - 1);
         inf.readSpace();
-        string name = inf.readToken("[a-z]{1,100}", "name");
+        string name = inf.readToken("[a-zA-Z]{1,10}", "name");
         inf.readSpace();
         inf.readInt(0, 10000);
         inf.readSpace();
