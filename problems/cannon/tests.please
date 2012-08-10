@@ -1,2 +1,29 @@
 [sample]tests/[1-2]
 
+[random]gen_random.py 1 1 50 1 50 
+[random]gen_random.py 2 1 50 1 50 
+[random]gen_random.py 3 1 50 1 50 
+[random]gen_random.py 4 1 50 1 50
+[random]gen_random.py 5 1 50 1 50
+[random]gen_random.py 6 1 50 1 50
+
+[random]gen_random.py 1 -50 -1 -50 -1
+[random]gen_random.py 2 -50 -1 -50 -1
+[random]gen_random.py 3 -50 -1 -50 -1
+[random]gen_random.py 4 -50 -1 -50 -1
+[random]gen_random.py 5 -50 -1 -50 -1
+[random]gen_random.py 6 -50 -1 -50 -1
+
+[100]gen_random.py 1 -100 -1 -100 100 100
+[100]gen_random.py 2 -100 -1 -100 100 100
+[100]gen_random.py 3 -100 -1 -100 100 100
+[100]gen_random.py 4 -100 -1 -100 100 100
+[100]gen_random.py 5 -100 -1 -100 100 100
+[100]gen_random.py 6 -100 -1 -100 100 100
+
+[max]gen_random.py 1 -500 -1 -500 500 300
+[max]gen_random.py 2 -500 -1 -500 500 300
+[max]gen_random.py 3 -500 -1 -500 500 300
+[max]gen_random.py 1 -500 500 -500 -1 300
+[max]gen_random.py 2 -500 500 -500 -1 300
+[max]gen_random.py 3 -500 500 -500 -1 300

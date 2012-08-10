@@ -160,13 +160,13 @@ bool contains(const Points& points, const Point& point)
 int main()
 {
     registerValidation();
-    int n = inf.readInt(3, 100);
+    int n = inf.readInt(3, 300);
     inf.readEoln();
     vector<Point> points(n);
     for (int i = 0; i < n; ++i) {
-        points[i].x = inf.readInt(-100, 100);
+        points[i].x = inf.readInt(-500, 500);
         inf.readSpace();
-        points[i].y = inf.readInt(-100, 100);
+        points[i].y = inf.readInt(-500, 500);
         inf.readEoln();
     }
     inf.readEof();

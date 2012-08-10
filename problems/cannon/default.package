@@ -1,15 +1,15 @@
 please_version = 0.2
 name = 
 shortname = cannon
-tags = 
+tags = geometry, numeric methods
 type = 
 
 input = stdin
 output = stdout
-time_limit = 2
+time_limit = 0.5
 memory_limit = 64
 
-checker = checker.cpp
+checker = dcmp.cpp
 validator = validator.cpp
 main_solution = solutions/solution.cpp
 
@@ -20,3 +20,7 @@ well_done_test = endswith_EOLN, no_symbols_less_32, no_left_right_space, no_doub
 well_done_answer = endswith_EOLN, no_symbols_less_32, no_left_right_space, no_double_space, no_top_bottom_emptyline, not_empty
 
 analysis = statements/analysis.ru.tex
+solution = {
+    source = solutions/tl_solution.cpp
+    expected = TL
+}
