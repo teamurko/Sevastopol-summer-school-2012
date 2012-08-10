@@ -34,9 +34,10 @@ void readData(Graph* graph, vector<int>* values, int& root)
 
 set<int>* merge(set<int>* first, set<int>* second, int& ans)
 {
-    if (first->size() > second->size()) {
+    if (first->size() < second->size()) {
         swap(first, second);
     }
+    cerr << "mergin " << first->size() << " to " << second->size() << endl;
     for (set<int>::const_iterator it = first->begin();
                                   it != first->end();
                                   ++it) {
@@ -59,14 +60,14 @@ void dfs(int vertex, const Graph& graph,
          vector<set<int>*>* table,
          vector<int>* ans)
 {
-    if (graph.at(vertex).size() == 0) {
+    if (graph[vertex].size() == 0) {
         table->at(vertex) = new set<int>();
         table->at(vertex)->insert(values[vertex]);
         return;
     }
     int localAns = MOD;
     forv(i, graph[vertex]) {
-        int child = graph[vertex].at(i);
+        int child = graph[vertex][i];
         dfs(child, graph, values, table, ans);
         localAns = min(localAns, ans->at(child));
     }

@@ -1,1 +1,47 @@
 [sample]tests/[1-2]
+
+[random_small]gen_random.py 1 1 10 0 100
+[random_small]gen_random.py 2 1 10 0 100
+[random_small]gen_random.py 3 1 10 0 100
+[random_small]gen_random.py 4 1 10 0 100
+[random_small]gen_random.py 5 1 10 0 100
+[random_small]gen_random.py 6 1 10 0 100
+[random_small]gen_random.py 7 1 10 0 100
+[random_small]gen_random.py 8 1 10 0 100
+[random_small]gen_random.py 9 1 10 0 100
+[random_small]gen_random.py 10 1 10 0 100
+
+
+[random_middle]gen_random.py 1 10 1000 0 100
+[random_middle]gen_random.py 2 10 1000 0 100
+[random_middle]gen_random.py 3 10 1000 0 100
+[random_middle]gen_random.py 4 10 1000 0 100
+[random_middle]gen_random.py 5 10 1000 0 100
+[random_middle]gen_random.py 6 10 1000 0 10000
+[random_middle]gen_random.py 7 10 1000 0 10000
+[random_middle]gen_random.py 8 10 1000 0 10000
+[random_middle]gen_random.py 9 10 1000 0 10000
+[random_middle]gen_random.py 10 10 1000 0 10000
+
+[random_chain]gen_chain_random.py 1 40000 40000 0 1000000
+[random_chain]gen_chain_random.py 2 40000 40000 0 1000000
+[random_chain]gen_chain_random.py 3 40000 40000 0 1000000
+[random_chain]gen_chain_random.py 4 40000 40000 0 1000000
+[random_chain]gen_chain_random.py 5 40000 40000 0 1000000
+
+[random_max]gen_random.py 1 40000 40000 0 1000000
+[random_max]gen_random.py 2 40000 40000 0 1000000
+[random_max]gen_random.py 3 40000 40000 0 1000000
+[random_max]gen_random.py 4 40000 40000 0 1000000
+[random_max]gen_random.py 5 40000 40000 0 1000000
+[random_max]gen_random.py 6 40000 40000 0 1000000
+[random_max]gen_random.py 7 40000 40000 0 1000000
+[random_max]gen_random.py 8 40000 40000 0 1000000
+[random_max]gen_random.py 9 40000 40000 0 1000000
+[random_max]gen_random.py 10 40000 40000 0 1000000
+
+[random_full_binary]gen_full_bin.py 1 40000 40000 0 1000000
+[random_full_binary]gen_full_bin.py 2 40000 40000 0 1000000
+[random_full_binary]gen_full_bin.py 3 40000 40000 0 1000000
+[random_full_binary]gen_full_bin.py 4 40000 40000 0 1000000
+[random_full_binary]gen_full_bin.py 5 40000 40000 0 1000000

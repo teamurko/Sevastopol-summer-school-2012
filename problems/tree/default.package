@@ -1,12 +1,12 @@
 please_version = 0.2
-name = 
+name = tree
 shortname = tree
-tags = 
+tags = data structure, graphs
 type = 
 
 input = stdin
 output = stdout
-time_limit = 2
+time_limit = 1 
 memory_limit = 64
 
 checker = icmp.cpp
@@ -21,6 +21,21 @@ well_done_answer = endswith_EOLN, no_symbols_less_32, no_left_right_space, no_do
 
 analysis = statements/analysis.ru.tex
 solution = {
+    source = solutions/ok_rand_solution.cpp
+    expected = OK
+}
+solution = {
     source = solutions/tl_solution.cpp
     expected = TL
+    possible = OK
+}
+solution = {
+    source = solutions/wa_solution.cpp
+    expected = WA
+    possible = OK
+}
+solution = {
+    source = solutions/wa_tl_solution.cpp
+    expected = WA, TL
+    possible = OK
 }

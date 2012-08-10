@@ -6,7 +6,7 @@
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < int(n); ++i)
-#define forv(i, v) forn(i, v.size())
+#define forv(i, v) forn(i, (v).size())
 
 typedef vector<vector<int> > Graph;
 const int UNDEFINED = -1;
@@ -32,57 +32,58 @@ void readData(Graph* graph, vector<int>* values, int& root)
     }
 }
 
-set<int>* merge(set<int>* first, set<int>* second, int& ans)
+vector<int>* merge(vector<int>* first, vector<int>* second, int& ans)
 {
-// Should this make tl?
-//    if (first->size() > second->size()) {
-//        swap(first, second);
-//    }
-    for (set<int>::const_iterator it = first->begin();
-                                  it != first->end();
-                                  ++it) {
-        set<int>::const_iterator fit = second->lower_bound(*it);
-        if (fit != second->end()) {
-            ans = min(ans, abs(*it - *fit));
-        }
-        if (fit != second->begin()) {
-            --fit;
-            ans = min(ans, abs(*it -*fit));
+    cerr << first->size() << " " << second-> size() << endl;
+    if (first->size() > second->size()) {
+        swap(first, second);
+    }
+    forv(i, *first) {
+        forv(j, *second) {
+            int a = first->at(i);
+            int b = second->at(j);
+            ans = min(ans, abs(a - b));
         }
     }
-    second->insert(first->begin(), first->end());
-    first->clear();
-    return second;
+    forv(i, *second) {
+        first->push_back(second->at(i));
+    }
+    second->clear();
+    return first;
 }
 
 void dfs(int vertex, const Graph& graph,
          const vector<int>& values,
-         vector<set<int>*>* table,
+         vector<vector<int>*>* table,
          vector<int>* ans)
 {
-    if (graph[vertex].size() == 0) {
-        table->at(vertex) = new set<int>();
-        table->at(vertex)->insert(values[vertex]);
+    if (graph.at(vertex).size() == 0) {
+        table->at(vertex) = new vector<int>();
+        table->at(vertex)->push_back(values[vertex]);
         return;
     }
     int localAns = MOD;
     forv(i, graph[vertex]) {
-        int child = graph[vertex][i];
+        int child = graph[vertex].at(i);
         dfs(child, graph, values, table, ans);
         localAns = min(localAns, ans->at(child));
     }
-    set<int>* cur = table->at(graph[vertex].front());
+    vector<int>* cur = table->at(graph[vertex].front());
     for (size_t i = 1; i < graph[vertex].size(); ++i) {
         int child = graph[vertex][i];
         cur = merge(cur, table->at(child), localAns);
     }
+    forv(i, *cur) {
+        localAns = min(localAns, abs(values[vertex] - cur->at(i)));
+    }
+    cur->push_back(values[vertex]);
     table->at(vertex) = cur;
     ans->at(vertex) = localAns;
 }
 
 void solve(const Graph& graph, const vector<int>& values, int root)
 {
-    vector<set<int>*> table(graph.size());
+    vector<vector<int>*> table(graph.size());
     vector<int> ans(graph.size(), MOD);
     dfs(root, graph, values, &table, &ans);
     long long Ans = 0;

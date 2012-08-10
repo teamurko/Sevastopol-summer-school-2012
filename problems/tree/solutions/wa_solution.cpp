@@ -75,14 +75,6 @@ void dfs(int vertex, const Graph& graph,
         int child = graph[vertex][i];
         cur = merge(cur, table->at(child), localAns);
     }
-    set<int>::const_iterator it = cur->lower_bound(values[vertex]);
-    if (it != cur->end()) {
-        localAns = min(localAns, abs(values[vertex] - *it));
-    }
-    if (it != cur->begin()) {
-        --it;
-        localAns = min(localAns, abs(values[vertex] - *it));
-    }
     cur->insert(values[vertex]);
     table->at(vertex) = cur;
     ans->at(vertex) = localAns;
