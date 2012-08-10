@@ -34,9 +34,10 @@ void readData(Graph* graph, vector<int>* values, int& root)
 
 set<int>* merge(set<int>* first, set<int>* second, int& ans)
 {
-    if (first->size() > second->size()) {
-        swap(first, second);
-    }
+// Should this make tl?
+//    if (first->size() > second->size()) {
+//        swap(first, second);
+//    }
     for (set<int>::const_iterator it = first->begin();
                                   it != first->end();
                                   ++it) {
