@@ -1,7 +1,7 @@
 please_version = 0.2
 name = Квадратный корень
 shortname = sqroot
-tags = 
+tags = numbers theory, meet_in_the_middle, optimization hack 
 type = 
 
 input = stdin
