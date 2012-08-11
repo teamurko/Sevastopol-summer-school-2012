@@ -1,1 +1,12 @@
-[sample] tests/[1]
+[sample] tests/[1-2]
+
+[random] gen_random.py 1 10000
+[random] gen_random.py 2 10000
+[random] gen_random.py 3 10000
+[random] gen_random.py 4 10000
+[random] gen_random.py 5 10000
+[random] gen_random.py 6 10000
+[random] gen_random.py 7 10000
+[random] gen_random.py 8 10000
+[random] gen_random.py 9 10000
+[random] gen_random.py 10 10000

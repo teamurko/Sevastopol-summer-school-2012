@@ -1,12 +1,12 @@
 please_version = 0.2
-name = 
+name = Взлом RSA 
 shortname = rsa
-tags = 
+tags = numbers theory
 type = 
 
 input = stdin
 output = stdout
-time_limit = 2
+time_limit = 0.5
 memory_limit = 64
 
 checker = wcmp.cpp
