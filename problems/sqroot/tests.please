@@ -1,5 +1,6 @@
-[sample]gen.py 1000 10
+[sample]gen.py 4 10
 
+[middle]gen.py 100 20
 [middle]gen.py 100 100
 [middle]gen.py 100 500
 [middle]gen.py 100 1000
