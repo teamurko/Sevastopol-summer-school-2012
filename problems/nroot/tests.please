@@ -1,0 +1,45 @@
+[sample] python "3\n3 1 7\n2 2 7\n3 3 11\n"
+
+[middle] gen.cpp 100 1 20 100
+[middle] gen.cpp 100 2 20 100
+[middle] gen.cpp 100 3 20 100
+[middle] gen.cpp 100 4 20 100
+[middle] gen.cpp 100 5 20 100
+[middle] gen.cpp 100 6 20 100
+[middle] gen.cpp 100 7 20 100
+[middle] gen.cpp 100 8 20 100
+[middle] gen.cpp 100 9 20 100
+[middle] gen.cpp 100 10 20 100
+
+[middle] gen.cpp 10000 1 200 100
+[middle] gen.cpp 10000 2 200 100
+[middle] gen.cpp 10000 3 200 100
+[middle] gen.cpp 10000 4 200 100
+[middle] gen.cpp 10000 5 200 100
+[middle] gen.cpp 10000 6 200 100
+[middle] gen.cpp 10000 7 200 100
+[middle] gen.cpp 10000 8 200 100
+[middle] gen.cpp 10000 9 200 100
+[middle] gen.cpp 10000 10 200 100
+
+[max] gen.cpp 10000 1 100000 100
+[max] gen.cpp 10000 2 100000 100
+[max] gen.cpp 10000 3 100000 100
+[max] gen.cpp 10000 4 100000 100
+[max] gen.cpp 10000 5 100000 100
+[max] gen.cpp 10000 6 100000 100
+[max] gen.cpp 10000 7 100000 100
+[max] gen.cpp 10000 8 100000 100
+[max] gen.cpp 10000 9 100000 100
+[max] gen.cpp 10000 10 100000 100
+
+[max] gen.cpp 10000 1 1000000 100
+[max] gen.cpp 10000 2 1000000 100
+[max] gen.cpp 10000 3 1000000 100
+[max] gen.cpp 10000 4 1000000 100
+[max] gen.cpp 10000 5 1000000 100
+[max] gen.cpp 10000 6 1000000 100
+[max] gen.cpp 10000 7 1000000 100
+[max] gen.cpp 10000 8 1000000 100
+[max] gen.cpp 10000 9 1000000 100
+[max] gen.cpp 10000 10 1000000 100
