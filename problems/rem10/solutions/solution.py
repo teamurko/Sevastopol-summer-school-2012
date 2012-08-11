@@ -18,20 +18,20 @@ def pow(a, n):
         n >>= 1
     return res
 
-def calc(zwei, funf, n):
+def calc(p, zwei, funf, n):
     if n == 1:
-        return 19 % (pow(2, zwei) * pow(5, funf))
+        return p % (pow(2, zwei) * pow(5, funf))
     if funf == 0:
         if zwei == 0:
             return 0
-        m = calc(zwei - 1, 0, n - 1)
+        m = calc(p, zwei - 1, 0, n - 1)
     else:
-        m = calc(zwei + 1, funf - 1, n - 1)
-    return pow_mod(19, m, pow(2, zwei) * pow(5, funf))
+        m = calc(p, zwei + 1, funf - 1, n - 1)
+    return pow_mod(p, m, pow(2, zwei) * pow(5, funf))
 
 def main():
-    k, n = [int(x) for x in sys.stdin.readline().strip().split()]
-    print calc(k, k, n)
+    p, n = [int(x) for x in sys.stdin.readline().strip().split()]
+    print calc(p, 16, 16, n)
 
 if __name__ == "__main__":
     main()

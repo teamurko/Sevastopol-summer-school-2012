@@ -1,12 +1,12 @@
 please_version = 0.2
-name = 
+name = Степень в степени!
 shortname = rem10
-tags = 
+tags = numbers theory
 type = 
 
 input = stdin
 output = stdout
-time_limit = 2
+time_limit = 1
 memory_limit = 64
 
 checker = hcmp.cpp
