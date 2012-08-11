@@ -1,1 +1,14 @@
-[middle]gen_middle.py
+[sample]gen.py 1000 10
+
+[middle]gen.py 100 100
+[middle]gen.py 100 500
+[middle]gen.py 100 1000
+[middle]gen.py 10000 30
+[middle]gen.py 100000 10000
+[middle]gen.py 100000 20000
+
+[max]gen.py 100000 18000
+[max]gen.py 100000 19000
+[max]gen.py 100000 20000
+[max]gen.py 100000 31000
+[max]gen.py 100000 33000
