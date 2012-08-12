@@ -1,0 +1,38 @@
+[sample] python "3 5\n"
+[sample] python "7 11\n"
+
+[random] gen_random.cpp 1
+[random] gen_random.cpp 2 
+[random] gen_random.cpp 3
+[random] gen_random.cpp 4
+[random] gen_random.cpp 5
+[random] gen_random.cpp 6
+[random] gen_random.cpp 7
+[random] gen_random.cpp 8
+[random] gen_random.cpp 9
+[random] gen_random.cpp 10
+[random] gen_random.cpp 11
+[random] gen_random.cpp 12 
+[random] gen_random.cpp 13
+[random] gen_random.cpp 14
+[random] gen_random.cpp 15
+[random] gen_random.cpp 16
+[random] gen_random.cpp 17
+[random] gen_random.cpp 18
+[random] gen_random.cpp 19
+[random] gen_random.cpp 20
+
+[max] python "436273009 436273291\n"
+[max] python "387096133 387096383\n"
+[max] python "191912783 191913031\n"
+[max] python "189695659 189695893\n"
+[max] python "122164747 122164969\n"
+[max] python "47326693 47326913\n"
+[max] python "20831323 20831533\n"
+[max] python "17051707 17051887\n"
+[max] python "4652353 4652507\n"
+[max] python "2010733 2010881\n"
+[max] python "1357201 1357333\n"
+[max] python "1349533 1349651\n"
+[max] python "492113 492227\n"
+[max] python "370261 370373\n"
