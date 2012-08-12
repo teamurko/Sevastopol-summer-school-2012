@@ -1,0 +1,28 @@
+[sample] tests/[1-2]
+
+[check] gen_random.py 1 10 2
+[check] gen_random.py 2 10 3
+
+[max] gen_random.py 1 33333 25
+[max] gen_random.py 2 33333 25
+[max] gen_random.py 3 33333 25
+[max] gen_random.py 4 33333 25
+[max] gen_random.py 5 33333 25
+[max] gen_random.py 6 33333 25
+[max] gen_random.py 7 33333 25
+
+[max] gen_random.py 1 100005000070000000 157
+[max] gen_random.py 2 100000400020000000 157
+[max] gen_random.py 3 100000005000507000 157
+[max] gen_random.py 4 100009000800004000 157
+[max] gen_random.py 5 100009090070070000 157
+[max] gen_random.py 6 100070007000070000 157
+[max] gen_random.py 7 100030030070007000 157
+
+[max] gen_random.py 1 1000000000000000000 200
+[max] gen_random.py 2 1000000000000000000 200
+[max] gen_random.py 3 1000000000000000000 200
+[max] gen_random.py 4 1000000000000000000 200
+[max] gen_random.py 5 1000000000000000000 200
+[max] gen_random.py 6 1000000000000000000 200
+[max] gen_random.py 7 1000000000000000000 200
