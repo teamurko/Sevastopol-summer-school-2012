@@ -1,5 +1,5 @@
 please_version = 0.2
-name = complex
+name = Самое сложное число
 shortname = complex
 tags = numbers_theory; brute_force
 type = 
