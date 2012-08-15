@@ -69,14 +69,16 @@ Points convexHull(Points points)
 
     for1(i, points.size() - 1) {
         const Point& pt = points[i];
-        if (i + 1 == points.size() || isClockWise(p1, pt, p2)) {
+        if (i + 1 == static_cast<int>(points.size()) ||
+                                        isClockWise(p1, pt, p2)) {
             while (up.size() >= 2 &&
                    !isClockWise(up[up.size()-2], up.back(), pt)) {
                 up.pop_back();
             }
             up.pb(pt);
         }
-        if (i + 1 == points.size() || isCounterClockWise(p1, pt, p2)) {
+        if (i + 1 == static_cast<int>(points.size()) ||
+                                isCounterClockWise(p1, pt, p2)) {
             while (down.size() >= 2 &&
                    !isCounterClockWise(
                             down[down.size()-2], down.back(), pt)) {
@@ -191,7 +193,50 @@ ld f(const Points& points, ld angle)
     }
 }
 
-void solve(const Points& points)
+class FixedDirectionProbability
+{
+    FixedDirectionProbability(const Points& points) : points_(&points) { }
+
+    ld operator()(ld x) const
+    {
+        return f(*points_, x);
+    }
+private:
+    const Points* points_;
+};
+
+template <class Function>
+ld simpson(Function f, ld L, ld R, ld numSteps)
+{
+    const ld step = (R - L) / numSteps;
+    ld result = f(R);
+    forn(i, numSteps + 1) {
+        if (i == 0) {
+            result += f(L);
+        } else if (i & 1) {
+            result += 4 * f((L*(numSteps-i) + i*R) / numSteps);
+        } else {
+            result += 2 * f((L*(numSteps-i) + i*R) / numSteps);
+        }
+    }
+    return result;
+}
+
+template <class Function>
+ld linear(Function f, ld L, ld R, ld numSteps)
+{
+    const ld step = (R - L) / numSteps;
+    ld result = 0.0;
+    forn(stepIndex, numSteps) {
+        ld l = (R - L) * stepIndex / numSteps;
+        ld r = l + step;
+        result += (f(l) + f(r)) / 2;
+    }
+    result *= step;
+    return result;
+}
+
+ld solve(const Points& points)
 {
     const ld L = 0.0;
     const ld R = 2 * M_PI;
@@ -207,13 +252,14 @@ void solve(const Points& points)
             result += 2 * f(points, (L*(NUM_STEPS-i) + i*R) / NUM_STEPS);
         }
     }
-    cout << setprecision(10) << fixed << result * STEP / 6.0 << endl;
+    return result * STEP / 6.0;
 }
 
 int main (int argc, char * const argv[])
 {
     Points points;
     readData(&points);
-    solve(convexHull(points));
+    ld ans = solve(convexHull(points));
+    cout << setprecision(10) << ans << endl;
     return 0;
 }
