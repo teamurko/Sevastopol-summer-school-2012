@@ -195,6 +195,7 @@ ld f(const Points& points, ld angle)
 
 class FixedDirectionProbability
 {
+public:
     FixedDirectionProbability(const Points& points) : points_(&points) { }
 
     ld operator()(ld x) const
@@ -219,7 +220,7 @@ ld simpson(Function f, ld L, ld R, ld numSteps)
             result += 2 * f((L*(numSteps-i) + i*R) / numSteps);
         }
     }
-    return result;
+    return result * step / 6.0;
 }
 
 template <class Function>
@@ -241,18 +242,7 @@ ld solve(const Points& points)
     const ld L = 0.0;
     const ld R = 2 * M_PI;
     const int NUM_STEPS = 10000;
-    const ld STEP = (R - L) / NUM_STEPS;
-    ld result = f(points, R);
-    forn(i, NUM_STEPS + 1) {
-        if (i == 0) {
-            result += f(points, L);
-        } else if (i & 1) {
-            result += 4 * f(points, (L*(NUM_STEPS-i) + i*R) / NUM_STEPS);
-        } else {
-            result += 2 * f(points, (L*(NUM_STEPS-i) + i*R) / NUM_STEPS);
-        }
-    }
-    return result * STEP / 6.0;
+    return simpson(FixedDirectionProbability(points), L, R, NUM_STEPS) ;
 }
 
 int main (int argc, char * const argv[])
