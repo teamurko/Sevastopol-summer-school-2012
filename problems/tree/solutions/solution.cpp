@@ -93,6 +93,7 @@ void solve(const Graph& graph, const vector<int>& values, int root)
     vector<set<int>*> table(graph.size());
     vector<int> ans(graph.size(), MOD);
     dfs(root, graph, values, &table, &ans);
+    reverse(ans.begin(), ans.end());
     long long Ans = 0;
     forv(i, graph) {
         Ans = (Ans * P + ans[i]) % MOD;
