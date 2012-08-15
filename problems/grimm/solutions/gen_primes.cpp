@@ -38,7 +38,7 @@ int main (int argc, char * const argv[])
         }
         forn(j, N) {
             if (i * N + j < 2) continue;
-            if (prime.test(j)) {
+            if (prime.test(j) && shift + j > 2) {
                 cout << shift + j << " ";
             }
         }
