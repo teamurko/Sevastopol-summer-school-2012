@@ -206,10 +206,20 @@ private:
     const Points* points_;
 };
 
+struct Polynom
+{
+    ld operator()(ld x) const
+    {
+        return cosl(x);
+    }
+};
+
+//TODO: check it
 template <class Function>
 ld simpson(Function f, ld L, ld R, ld numSteps)
 {
     const ld step = (R - L) / numSteps;
+    /*
     ld result = f(R);
     forn(i, numSteps + 1) {
         if (i == 0) {
@@ -220,6 +230,13 @@ ld simpson(Function f, ld L, ld R, ld numSteps)
             result += 2 * f((L*(numSteps-i) + i*R) / numSteps);
         }
     }
+    */
+    ld result = 0.0;
+    forn(i, numSteps) {
+        ld l = L + (R - L) * i / numSteps;
+        ld r = l + step;
+        result += f(l) + 4 * f((l + r) / 2) + f(r);
+    }
     return result * step / 6.0;
 }
 
@@ -229,7 +246,7 @@ ld linear(Function f, ld L, ld R, ld numSteps)
     const ld step = (R - L) / numSteps;
     ld result = 0.0;
     forn(stepIndex, numSteps) {
-        ld l = (R - L) * stepIndex / numSteps;
+        ld l = L + (R - L) * stepIndex / numSteps;
         ld r = l + step;
         result += (f(l) + f(r)) / 2;
     }
@@ -241,15 +258,17 @@ ld solve(const Points& points)
 {
     const ld L = 0.0;
     const ld R = 2 * M_PI;
-    const int NUM_STEPS = 10000;
-    return simpson(FixedDirectionProbability(points), L, R, NUM_STEPS) ;
+    const int NUM_STEPS = 100000;
+    return simpson(FixedDirectionProbability(points),
+                   L, R, NUM_STEPS)
+           / 2 / M_PI;
 }
 
 int main (int argc, char * const argv[])
 {
     Points points;
     readData(&points);
-    ld ans = solve(convexHull(points));
-    cout << setprecision(10) << ans << endl;
+    double ans = solve(convexHull(points));
+    cout << setprecision(20) << fixed << ans << endl;
     return 0;
 }
